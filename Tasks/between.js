@@ -1,25 +1,24 @@
 // Refactor following solution
 // Extract substring between prefix and suffix
 
-// Step 4
-// don't mutate incoming parameter;
+// Step 5
+// Use 'slice' instead 'substring'
 
 
 "use strict";
 
 const getValueBetween = (string, prefix, suffix) => {
-  let result = string;
-  const startIndex = result.indexOf(prefix);
+
+  const startIndex = string.indexOf(prefix);
   if (startIndex === -1) return "";
 
-  const key = startIndex + prefix.length;
-  result = result.substring(key);
+  let result = string.slice(startIndex + prefix.length);
 
   if (suffix) {
     const endIndex = result.indexOf(suffix);
     if (endIndex === -1) return "";
 
-    result = result.substring(0, endIndex);
+    result = result.slice(0, endIndex);
     }
 
   return result;
