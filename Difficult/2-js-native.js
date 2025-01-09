@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Tasks for rewriting:
 //   - Reduce number of classes
@@ -52,7 +52,7 @@ class GroupComposite {
   getTotal() {
     let total = 0;
     for (const item of this.items) {
-      if (item.price < 0) throw 'Negative price';
+      if (item.price < 0) throw "Negative price";
       total += item.price;
     }
     return total;
@@ -81,16 +81,16 @@ class ExpenseObserver {
 class RateStrategy {
   // eslint-disable-next-line
   async getRate(currency) {
-    throw new Error('This method should be overridden by subclasses');
+    throw new Error("This method should be overridden by subclasses");
   }
 }
 
 class OpenExchangeRateStrategy extends RateStrategy {
   constructor() {
     super();
-    this.host = 'openexchangerates.org';
-    this.path = '/api/latest.json?app_id=';
-    this.key = '1f43ea96b1e343fe94333dd2b97a109d';
+    this.host = "openexchangerates.org";
+    this.path = "/api/latest.json?app_id=";
+    this.key = "1f43ea96b1e343fe94333dd2b97a109d";
   }
 
   async getRate(currency) {
@@ -152,7 +152,7 @@ class PurchaseController {
   async execute() {
     try {
       const total = this.processPurchases();
-      const money = await PurchaseController.convertCurrency(total, 'UAH');
+      const money = await PurchaseController.convertCurrency(total, "UAH");
       console.log(`Total: ${money}`);
     } catch (err) {
       console.error(err);

@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-const assert = require('node:assert').strict;
+const assert = require("node:assert").strict;
 
-const COLOR_ERROR = '\x1b[0;31m';
-const COLOR_INFO = '\x1b[1;37m';
-const COLOR_NORM = '\x1b[0m';
+const COLOR_ERROR = "\x1b[0;31m";
+const COLOR_INFO = "\x1b[1;37m";
+const COLOR_NORM = "\x1b[0m";
 
 const logger = (color) => (s) => {
   console.log(color + s + COLOR_NORM);
@@ -13,13 +13,16 @@ const logger = (color) => (s) => {
 logger.error = logger(COLOR_ERROR);
 logger.info = logger(COLOR_INFO);
 
-const serialize = (args) => [...args].map((x) => {
-  const type = typeof x;
-  if (type === 'object') return JSON.stringify(x);
-  if (type === 'string') return `'${x}'`;
-  if (type === 'number') return x.toString();
-  return x.toString();
-}).join(', ');
+const serialize = (args) =>
+  [...args]
+    .map((x) => {
+      const type = typeof x;
+      if (type === "object") return JSON.stringify(x);
+      if (type === "string") return `'${x}'`;
+      if (type === "number") return x.toString();
+      return x.toString();
+    })
+    .join(", ");
 
 module.exports = (cases) => async (name) => {
   const fn = require(`./Tasks/${name}.js`);
@@ -33,7 +36,7 @@ module.exports = (cases) => async (name) => {
       res = err;
     }
     result = JSON.stringify(res);
-    if (typeof expected === 'function') {
+    if (typeof expected === "function") {
       const success = expected(res);
       if (!success) {
         if (res instanceof Error) {

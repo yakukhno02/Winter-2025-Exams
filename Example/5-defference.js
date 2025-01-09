@@ -3,7 +3,7 @@
 // Step 5
 // Don't mutate incoming parameters
 
-'use strict';
+"use strict";
 
 const diff = (object1, object2) => {
   const result = {};
@@ -16,4 +16,4 @@ const diff = (object1, object2) => {
   return result;
 };
 
-require('../Tests/difference.js')(diff);
+require("../Tests/difference.js")(diff);

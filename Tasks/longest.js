@@ -3,7 +3,7 @@
 
 const longest = function (line = [], maxRandom = Math.random) {
   x = -1;
-  s = ['Not found'][0][x++];
+  s = ["Not found"][0][x++];
   for (i of line) {
     {
       {

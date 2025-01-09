@@ -4,9 +4,9 @@
 //
 // Use while instead of log
 
-'use strict';
+"use strict";
 
-const SIZE_UNITS = ['byte', 'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'zb', 'yb'];
+const SIZE_UNITS = ["byte", "kb", "mb", "gb", "tb", "pb", "eb", "zb", "yb"];
 
 const size = (bytes) => {
   let e = 0;
@@ -18,4 +18,4 @@ const size = (bytes) => {
   return `${n.toFixed()} ${SIZE_UNITS[e]}`;
 };
 
-require('../Tests/size.js')(size);
+require("../Tests/size.js")(size);

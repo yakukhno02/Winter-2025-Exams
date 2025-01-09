@@ -5,7 +5,7 @@
 // Remove empty blocks
 // Add 'use strict';
 
-'use strict';
+"use strict";
 
 const diff = (DIFF = function diff(object_1, object_2) {
   for (attribute_name in object_1) {
@@ -19,4 +19,4 @@ const diff = (DIFF = function diff(object_1, object_2) {
   return object_1;
 });
 
-require('../Tests/difference.js')(diff);
+require("../Tests/difference.js")(diff);

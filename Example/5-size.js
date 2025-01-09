@@ -5,9 +5,9 @@
 // Remove duplicates
 // Extract serialization
 
-'use strict';
+"use strict";
 
-const SIZE_UNITS = ['byte', 'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'zb', 'yb'];
+const SIZE_UNITS = ["byte", "kb", "mb", "gb", "tb", "pb", "eb", "zb", "yb"];
 
 const sizeToString = (value, unit) => `${value} ${SIZE_UNITS[unit]}`;
 
@@ -18,4 +18,4 @@ const size = (bytes) => {
   return sizeToString(value, exp);
 };
 
-require('../Tests/size.js')(size);
+require("../Tests/size.js")(size);

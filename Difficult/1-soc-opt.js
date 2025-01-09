@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Tasks for rewriting:
 //   - Apply optimizations of computing resources: processor, memory
@@ -23,7 +23,7 @@ const data = `city,population,area,density,country
   Bangkok,8280925,1569,5279,Thailand`;
 
 if (data) {
-  const lines = data.split('\n');
+  const lines = data.split("\n");
   lines.pop();
   const table = [];
   let first = true;
@@ -32,7 +32,7 @@ if (data) {
     if (first) {
       first = false;
     } else {
-      const cells = line.split(',');
+      const cells = line.split(",");
       const d = parseInt(cells[3]);
       if (d > max) max = d;
       table.push([cells[0], cells[1], cells[2], cells[3], cells[4]]);

@@ -6,7 +6,7 @@ Words = function (s) {
   flag = false;
   for (c of s) {
     if (!flag) {
-      if (c === ' ') {
+      if (c === " ") {
         if (flag === true) {
           flag = false;
         } else {
@@ -21,7 +21,7 @@ Words = function (s) {
         number_of_words_in_s++;
       }
     } else {
-      if (c === ' ') {
+      if (c === " ") {
         if (flag === true) {
           flag = false;
         } else {

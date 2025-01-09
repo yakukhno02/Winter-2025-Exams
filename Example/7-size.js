@@ -5,9 +5,9 @@
 // Use .length instead of inverse function for power
 // Back to a single function
 
-'use strict';
+"use strict";
 
-const SIZE_UNITS = ['byte', 'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'zb', 'yb'];
+const SIZE_UNITS = ["byte", "kb", "mb", "gb", "tb", "pb", "eb", "zb", "yb"];
 
 const size = (bytes) => {
   const digits = bytes.toString().length;
@@ -16,4 +16,4 @@ const size = (bytes) => {
   return `${value} ${SIZE_UNITS[exp]}`;
 };
 
-require('../Tests/size.js')(size);
+require("../Tests/size.js")(size);

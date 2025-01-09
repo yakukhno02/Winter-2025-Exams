@@ -5,7 +5,7 @@
 // Change identifiers case
 // Add `const` and `let`
 
-'use strict';
+"use strict";
 
 const diff = (object1, object2) => {
   for (const attributeName in object1) {
@@ -19,4 +19,4 @@ const diff = (object1, object2) => {
   return object1;
 };
 
-require('../Tests/difference.js')(diff);
+require("../Tests/difference.js")(diff);

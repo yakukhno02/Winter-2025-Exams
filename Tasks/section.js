@@ -3,8 +3,8 @@
 
 SectionString = (s, t) => {
   i = s.indexOf(t);
-  if (i < 0 || t == '') {
-    return [s, ''];
+  if (i < 0 || t == "") {
+    return [s, ""];
   } else {
     return [s.slice(0, i), s.slice(i + t.length)];
   }

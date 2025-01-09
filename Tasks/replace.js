@@ -2,11 +2,11 @@
 // Replace substring with newstr
 
 Replace = (str, substr, newstr) => {
-  if (substr === '') {
+  if (substr === "") {
     return str;
   } else {
     src = str;
-    res = '';
+    res = "";
     do {
       const _index = src.indexOf(substr);
       if (_index === -1) {

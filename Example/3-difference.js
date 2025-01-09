@@ -3,7 +3,7 @@
 // Step 3
 // Remove senseless blocks
 
-'use strict';
+"use strict";
 
 const diff = (object1, object2) => {
   for (const attributeName in object2) {
@@ -12,4 +12,4 @@ const diff = (object1, object2) => {
   return object1;
 };
 
-require('../Tests/difference.js')(diff);
+require("../Tests/difference.js")(diff);

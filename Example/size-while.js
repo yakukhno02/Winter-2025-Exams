@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const SIZE_UNITS = ['byte', 'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'zb', 'yb'];
+const SIZE_UNITS = ["byte", "kb", "mb", "gb", "tb", "pb", "eb", "zb", "yb"];
 
 const size = (bytes) => {
   let exp = 0;
@@ -13,4 +13,4 @@ const size = (bytes) => {
   return `${value.toFixed()} ${SIZE_UNITS[exp]}`;
 };
 
-require('../Tests/size.js')(size);
+require("../Tests/size.js")(size);

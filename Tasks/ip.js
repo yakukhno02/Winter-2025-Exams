@@ -3,9 +3,9 @@
 
 Parseip = (i) => {
   a = [];
-  if (i === '') return;
+  if (i === "") return;
   else {
-    B = i.split('.');
+    B = i.split(".");
     if (B.length != 4) return;
     j = 0;
     for (const b of B) {

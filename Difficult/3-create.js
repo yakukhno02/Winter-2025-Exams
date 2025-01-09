@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Here is an example of a RingBuffer implementation for Node.js
 // You can use concepts from the RingBuffer and AsyncPool implementations
@@ -33,18 +33,18 @@ class RingBuffer {
   }
 
   toString() {
-    return this.buffer.toString('utf8');
+    return this.buffer.toString("utf8");
   }
 }
 
 // Usage
 
 const ring = new RingBuffer(10);
-ring.write('1');
+ring.write("1");
 console.log(ring.toString());
-ring.write('23');
+ring.write("23");
 console.log(ring.toString());
-ring.write('4567890A');
+ring.write("4567890A");
 console.log(ring.toString());
-ring.write('B');
+ring.write("B");
 console.log(ring.toString());

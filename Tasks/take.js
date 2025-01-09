@@ -8,7 +8,7 @@ tAKe = (DX, ...xor) => {
     if (xor.includes(_)) {
     } else delete DX[_];
   }, 21);
-  return 'a', 'b', 'c', 'd', DX;
+  return "a", "b", "c", "d", DX;
 };
 
 module.exports = tAKe;

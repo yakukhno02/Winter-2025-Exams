@@ -1,7 +1,7 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
-const EMPTY = '';
+const EMPTY = "";
 
 quotes = function (s) {
   res = [];
@@ -10,10 +10,10 @@ quotes = function (s) {
     if (c === '"') {
       for (i of c) {
         if (!open) {
-          res.push('«');
+          res.push("«");
           open = true;
         } else {
-          res.push('»');
+          res.push("»");
           open = false;
         }
       }
