@@ -1,27 +1,28 @@
 // Refactor following solution
 // Extract substring between prefix and suffix
 
-// Step 3
-// improve naming
+// Step 4
+// don't mutate incoming parameter;
 
 
 "use strict";
 
 const getValueBetween = (string, prefix, suffix) => {
-  const startIndex = string.indexOf(prefix);
+  let result = string;
+  const startIndex = result.indexOf(prefix);
   if (startIndex === -1) return "";
 
   const key = startIndex + prefix.length;
-  string = string.substring(key);
+  result = result.substring(key);
 
   if (suffix) {
-    const endIndex = string.indexOf(suffix);
+    const endIndex = result.indexOf(suffix);
     if (endIndex === -1) return "";
 
-    string = string.substring(0, endIndex);
+    result = result.substring(0, endIndex);
     }
 
-  return string;
+  return result;
 };
 
 module.exports = getValueBetween;
