@@ -1,12 +1,12 @@
 // Refactor following solution
 // Get one random element from an array
 
-// Step 1
-// Improve naming
+// Step 2
+// Don't mutate incoming parameter
 
 const getRandomElement = (array) => {
-  array = array[Math.floor(Math.random() * array.length)];
-  return array;
+  const randomElement = array[Math.floor(Math.random() * array.length)];
+  return randomElement;
 };
 
 module.exports = getRandomElement;
