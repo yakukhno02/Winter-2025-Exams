@@ -1,12 +1,12 @@
 // Refactor following solution
 // Get one random element from an array
 
-// Step 2
-// Don't mutate incoming parameter
+// Step 3
+// Add "use strict";
+// Simplify function;
 
-const getRandomElement = (array) => {
-  const randomElement = array[Math.floor(Math.random() * array.length)];
-  return randomElement;
-};
+"use strict";
+
+const getRandomElement = (array) => array[Math.floor(Math.random() * array.length)];
 
 module.exports = getRandomElement;
