@@ -1,9 +1,12 @@
 // Refactor following solution
 // Get one random element from an array
 
-const SAMPLE = (arr) => {
-  arr = arr[Math.floor(Math.random() * arr.length)];
-  return arr;
+// Step 1
+// Improve naming
+
+const getRandomElement = (array) => {
+  array = array[Math.floor(Math.random() * array.length)];
+  return array;
 };
 
-module.exports = SAMPLE;
+module.exports = getRandomElement;
