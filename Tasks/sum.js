@@ -1,25 +1,23 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-// Step 1
-// Add "use strict"
-// Remove unreachable code
-// Remove senseless blocks
+// Step 2
+// Improve naming
+// Replace array 'sum' with a single variable 'total'
 
 "use strict";
 
-const k = (sum) => {
-  sum = [0];
-  for (i of s) {
-    let t = typeof i;
-    if (t === "number") {
-      if (sum.length > 0) {
-        const new_Sum = sum[sum.length - 1] + i;
-        sum.push(new_Sum);
+const calcSum = (array) => {
+  let total = 0
+  for (const item of array) {
+    let type = typeof item;
+    if (type === "number") {
+      if (array.length > 0) {
+        total += item;
       }
     }
   }
-  return sum[sum.length - 1];
+  return total;
 };
 
-module.exports = sum;
+module.exports = calcSum;
