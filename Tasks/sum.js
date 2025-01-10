@@ -2,10 +2,12 @@
 // Sum all numbers from an array
 
 // Step 4
-// Replace loop (for ... of ...) with reduce method;
+// Improve readability;
 
 "use strict";
 
-const calcSum = (array) => array.reduce((total, item) => (typeof item === "number"? total + item : total), 0);
+const calcSum = (array) => {
+  return array.reduce((total, item) => (typeof item === "number" ? total + item : total), 0);
+};
 
 module.exports = calcSum;
