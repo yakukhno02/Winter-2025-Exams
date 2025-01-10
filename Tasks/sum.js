@@ -1,9 +1,15 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-const k = (sum = function (s = () => {}) {
+// Step 1
+// Add "use strict"
+// Remove unreachable code
+// Remove senseless blocks
+
+"use strict";
+
+const k = (sum) => {
   sum = [0];
-  let k = 5;
   for (i of s) {
     let t = typeof i;
     if (t === "number") {
@@ -13,9 +19,7 @@ const k = (sum = function (s = () => {}) {
       }
     }
   }
-  sum[0];
   return sum[sum.length - 1];
-  sum.push(sum.length - 1);
-});
+};
 
 module.exports = sum;
