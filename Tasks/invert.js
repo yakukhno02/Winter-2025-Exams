@@ -1,18 +1,17 @@
 // Refactor following solution
 // Reverse an array, you can't use .reverse()
 
-// Step 2
-// Add "use strict";
-// Add 'const';
+// Step 3
+// Improve naming;
 
 "use strict";
 
-const invert = (A) => {
-  const T = [];
-  while (A.length > 0) {
-    T.push(A.pop());
+const getInvertedArray = (array) => {
+  const invertedArray  = [];
+  while (array.length > 0) {
+    invertedArray.push(array.pop());
   }
-  return T;
+  return invertedArray;
 };
 
-module.exports = invert;
+module.exports = getInvertedArray;
