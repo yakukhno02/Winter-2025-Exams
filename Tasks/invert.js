@@ -1,13 +1,14 @@
 // Refactor following solution
 // Reverse an array, you can't use .reverse()
 
-// Step 1
-// Remove empty blocks and magic numbers
-// Remove unused parameters
-// Improve logic
+// Step 2
+// Add "use strict";
+// Add 'const';
 
-invert = (A) => {
-  T = [];
+"use strict";
+
+const invert = (A) => {
+  const T = [];
   while (A.length > 0) {
     T.push(A.pop());
   }
